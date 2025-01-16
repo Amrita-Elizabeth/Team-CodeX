@@ -7,7 +7,7 @@ using Tesseract;
 
 // Alias the conflicting ImageFormat
 using ImagingImageFormat = System.Drawing.Imaging.ImageFormat;  // Alias for System.Drawing.Imaging.ImageFormat
-using TessImageFormat = Tesseract.ImageFormat;                    // Alias for Tesseract.ImageFormat
+using TessImageFormat = Tesseract.ImageFormat;                  // Alias for Tesseract.ImageFormat
 
 class Program
 {
@@ -36,31 +36,15 @@ class Program
             Image image = Image.FromFile(file);
             Console.WriteLine($"Processing image: {file}");
 
-            // Apply preprocessing (rotate by 45 degrees as an example)
-            Image rotatedImage = RotateImage(image, 45);
-
-            // Save the processed image to the output folder using ImagingImageFormat alias
+            // Save the image directly to the output folder without rotation
             string outputFilePath = Path.Combine(outputFolderPath, Path.GetFileName(file));
-            rotatedImage.Save(outputFilePath, ImagingImageFormat.Jpeg);  // Use alias ImagingImageFormat.Jpeg
-
+            image.Save(outputFilePath, ImagingImageFormat.Jpeg);  // Save as JPEG format
             Console.WriteLine($"Saved processed image: {outputFilePath}");
 
             // Extract text using Tesseract OCR
             string extractedText = ExtractTextFromImage(outputFilePath);
             Console.WriteLine($"Extracted Text from {Path.GetFileName(file)}:\n{extractedText}\n");
         }
-    }
-
-    // Method to rotate an image
-    public static Image RotateImage(Image img, float rotationAngle)
-    {
-        Bitmap bmp = new Bitmap(img.Width, img.Height);
-        Graphics gfx = Graphics.FromImage(bmp);
-        gfx.TranslateTransform((float)bmp.Width / 2, (float)bmp.Height / 2);
-        gfx.RotateTransform(rotationAngle);
-        gfx.TranslateTransform(-(float)bmp.Width / 2, -(float)bmp.Height / 2);
-        gfx.DrawImage(img, new Point(0, 0));
-        return bmp;
     }
 
     // Method to extract text from an image using Tesseract OCR
