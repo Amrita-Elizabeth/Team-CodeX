@@ -8,6 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Extracted Text\**" />
+    <Compile Remove="OutputResults\**" />
+    <EmbeddedResource Remove="Extracted Text\**" />
+    <EmbeddedResource Remove="OutputResults\**" />
+    <None Remove="Extracted Text\**" />
+    <None Remove="OutputResults\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="System.Drawing.Common" Version="9.0.0" />
     <PackageReference Include="Tesseract" Version="5.2.0" />
   </ItemGroup>
@@ -15,7 +24,6 @@
   <ItemGroup>
     <Folder Include="InputImages\" />
     <Folder Include="tessdata\" />
-    <Folder Include="OutputResults\" />
   </ItemGroup>
 
 </Project>
