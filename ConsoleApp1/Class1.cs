@@ -1,4 +1,4 @@
-﻿// GrayscaleProcessing.cs
+﻿using System;
 using System.Drawing;
 using System.Drawing.Imaging;
 
@@ -30,17 +30,60 @@ public class GrayscaleProcessing
                         GraphicsUnit.Pixel, attributes);
         }
 
-        // Apply binarization
-        for (int x = 0; x < grayImage.Width; x++)
+        return grayImage;
+    }
+
+    // Method to apply adaptive thresholding
+    public Bitmap ApplyAdaptiveThreshold(Bitmap grayscaleImage, int blockSize, double offset)
+    {
+        Bitmap thresholdedImage = new Bitmap(grayscaleImage.Width, grayscaleImage.Height);
+
+        // Process each pixel for adaptive thresholding
+        for (int x = 0; x < grayscaleImage.Width; x++)
         {
-            for (int y = 0; y < grayImage.Height; y++)
+            for (int y = 0; y < grayscaleImage.Height; y++)
             {
-                Color pixelColor = grayImage.GetPixel(x, y);
-                int brightness = (int)((pixelColor.R + pixelColor.G + pixelColor.B) / 3);
-                grayImage.SetPixel(x, y, brightness < 128 ? Color.Black : Color.White);
+                // Calculate the average intensity within the block size
+                int halfBlockSize = blockSize / 2;
+                double sum = 0;
+                int count = 0;
+
+                for (int dx = -halfBlockSize; dx <= halfBlockSize; dx++)
+                {
+                    for (int dy = -halfBlockSize; dy <= halfBlockSize; dy++)
+                    {
+                        int nx = x + dx;
+                        int ny = y + dy;
+
+                        // Ensure the pixel is within bounds
+                        if (nx >= 0 && ny >= 0 && nx < grayscaleImage.Width && ny < grayscaleImage.Height)
+                        {
+                            Color neighborColor = grayscaleImage.GetPixel(nx, ny);
+                            sum += neighborColor.R; // Since the image is grayscale, R=G=B
+                            count++;
+                        }
+                    }
+                }
+
+                // Compute the average intensity for the block
+                double meanIntensity = sum / count;
+
+                // Get the current pixel intensity
+                Color currentColor = grayscaleImage.GetPixel(x, y);
+                int pixelIntensity = currentColor.R;
+
+                // Apply adaptive thresholding
+                if (pixelIntensity < meanIntensity - offset)
+                {
+                    thresholdedImage.SetPixel(x, y, Color.Black);
+                }
+                else
+                {
+                    thresholdedImage.SetPixel(x, y, Color.White);
+                }
             }
         }
 
-        return grayImage;
+        return thresholdedImage;
     }
 }

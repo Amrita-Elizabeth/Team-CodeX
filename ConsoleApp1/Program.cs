@@ -46,8 +46,19 @@ class Program
             Image image = Image.FromFile(file);
             Console.WriteLine($"Processing image: {file}");
 
+
             // Preprocess the image (convert to grayscale)
             Bitmap grayImage = grayscaleProcessor.ConvertToGrayscale((Bitmap)image);
+
+            // Apply adaptive thresholding
+            int blockSize = 15; // Define the block size (e.g., 15x15 pixels)
+            double offset = 10; // Define the offset value
+            Bitmap thresholdedImage = grayscaleProcessor.ApplyAdaptiveThreshold(grayImage, blockSize, offset);
+
+            // Save the adaptive thresholded image to the output folder
+            string thresholdedFilePath = Path.Combine(outputFolderPath, "thresholded_" + Path.GetFileName(file));
+            thresholdedImage.Save(thresholdedFilePath, ImagingImageFormat.Jpeg);
+            Console.WriteLine($"Saved adaptive thresholded image: {thresholdedFilePath}");
 
             // Save the preprocessed image to the output folder
             string outputFilePath = Path.Combine(outputFolderPath, Path.GetFileName(file));
