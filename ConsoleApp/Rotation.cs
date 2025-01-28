@@ -25,5 +25,24 @@ namespace Preprocessing
             gfx.DrawImage(img, new Point(0, 0));
             return bmp;
         }
+
+        public static Image ApplyThreshold(Image img, int threshold = 128)
+        {
+            Bitmap bmp = new Bitmap(img);
+            for (int y = 0; y < bmp.Height; y++)
+            {
+                for (int x = 0; x < bmp.Width; x++)
+                {
+                    Color pixel = bmp.GetPixel(x, y);
+                    int grayValue = (pixel.R + pixel.G + pixel.B) / 3;
+                    Color newColor = grayValue < threshold ? Color.Black : Color.White;
+                    bmp.SetPixel(x, y, newColor);
+                }
+            }
+            return bmp;
+        }
+
     }
 }
+
+
