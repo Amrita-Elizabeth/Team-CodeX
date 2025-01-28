@@ -16,19 +16,12 @@ class Program
     {
         // Set the input and output folder paths
         string inputFolderPath = @"C:\Users\ASUS\OneDrive\Desktop\Team_CodeX\Team_CodeX_2024-25\Team-CodeX\ConsoleApp1\InputImages";
-        string outputFolderPath = @"C:\Users\ASUS\OneDrive\Desktop\Team_CodeX\Team_CodeX_2024-25\Team-CodeX\ConsoleApp1\ProceesedImages";
+        string outputFolderPath = @"C:\Users\ASUS\OneDrive\Desktop\Team_CodeX\Team_CodeX_2024-25\Team-CodeX\ConsoleApp1\ProcessedImages";
         string textOutputFolderPath = @"C:\Users\ASUS\OneDrive\Desktop\Team_CodeX\Team_CodeX_2024-25\Team-CodeX\ConsoleApp1\ExtractedText";
 
         // Create the output folders if they don't exist
-        if (!Directory.Exists(outputFolderPath))
-        {
-            Directory.CreateDirectory(outputFolderPath);
-        }
-
-        if (!Directory.Exists(textOutputFolderPath))
-        {
-            Directory.CreateDirectory(textOutputFolderPath);
-        }
+        Directory.CreateDirectory(outputFolderPath);
+        Directory.CreateDirectory(textOutputFolderPath);
 
         // Get all image files with specified extensions from the input folder
         string[] imageFiles = Directory.GetFiles(inputFolderPath, "*.*")
@@ -46,14 +39,13 @@ class Program
             Image image = Image.FromFile(file);
             Console.WriteLine($"Processing image: {file}");
 
-
             // Preprocess the image (convert to grayscale)
             Bitmap grayImage = grayscaleProcessor.ConvertToGrayscale((Bitmap)image);
 
-            // Apply adaptive thresholding
+            // Apply optimized adaptive thresholding
             int blockSize = 15; // Define the block size (e.g., 15x15 pixels)
             double offset = 10; // Define the offset value
-            Bitmap thresholdedImage = grayscaleProcessor.ApplyAdaptiveThreshold(grayImage, blockSize, offset);
+            Bitmap thresholdedImage = grayscaleProcessor.ApplyAdaptiveThresholdOptimized(grayImage, blockSize, offset);
 
             // Save the adaptive thresholded image to the output folder
             string thresholdedFilePath = Path.Combine(outputFolderPath, "thresholded_" + Path.GetFileName(file));
@@ -66,7 +58,7 @@ class Program
             Console.WriteLine($"Saved processed image: {outputFilePath}");
 
             // Extract text using Tesseract OCR
-            string extractedText = ExtractTextFromImage(outputFilePath);
+            string extractedText = ExtractTextFromImage(thresholdedFilePath);
             Console.WriteLine($"Extracted Text from {Path.GetFileName(file)}:\n{extractedText}\n");
 
             // Save extracted text to a new text file
