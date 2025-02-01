@@ -1,10 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using Tesseract;
+
+// Alias to resolve ambiguity
+using ImagingImageFormat = System.Drawing.Imaging.ImageFormat;
 
 namespace OCRProject.Services
 {
@@ -23,11 +24,17 @@ namespace OCRProject.Services
             {
                 using (var engine = new TesseractEngine(_tessDataPath, "eng", EngineMode.Default))
                 {
-                    using (var pix = PixConverter.ToPix(image))
+                    using (var memoryStream = new MemoryStream())
                     {
-                        using (var page = engine.Process(pix))
+                        image.Save(memoryStream, ImagingImageFormat.Png);
+                        memoryStream.Position = 0;
+
+                        using (var pix = Pix.LoadFromMemory(memoryStream.ToArray()))
                         {
-                            return page.GetText();
+                            using (var page = engine.Process(pix))
+                            {
+                                return page.GetText();
+                            }
                         }
                     }
                 }
