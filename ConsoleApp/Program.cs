@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using Tesseract;
 using Preprocessing; // Assuming your Rotation class is in this namespace
+namespace OCRProject.Services;
 
 // Alias the conflicting ImageFormat
 using ImagingImageFormat = System.Drawing.Imaging.ImageFormat; // Alias for System.Drawing.Imaging.ImageFormat
