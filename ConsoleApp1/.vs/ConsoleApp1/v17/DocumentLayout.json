@@ -1,0 +1,110 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ASUS\\OneDrive\\Desktop\\Team_CodeX\\Team_CodeX_2024-25\\Team-CodeX\\ConsoleApp1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C1290833-E2D9-4C59-B9D7-209D5BFAF68D}|ConsoleApp1.csproj|c:\\users\\asus\\onedrive\\desktop\\team_codex\\team_codex_2024-25\\team-codex\\consoleapp1\\services\\imageloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1290833-E2D9-4C59-B9D7-209D5BFAF68D}|ConsoleApp1.csproj|solutionrelative:services\\imageloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1290833-E2D9-4C59-B9D7-209D5BFAF68D}|ConsoleApp1.csproj|c:\\users\\asus\\onedrive\\desktop\\team_codex\\team_codex_2024-25\\team-codex\\consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1290833-E2D9-4C59-B9D7-209D5BFAF68D}|ConsoleApp1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1290833-E2D9-4C59-B9D7-209D5BFAF68D}|ConsoleApp1.csproj|c:\\users\\asus\\onedrive\\desktop\\team_codex\\team_codex_2024-25\\team-codex\\consoleapp1\\preprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1290833-E2D9-4C59-B9D7-209D5BFAF68D}|ConsoleApp1.csproj|solutionrelative:preprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1290833-E2D9-4C59-B9D7-209D5BFAF68D}|ConsoleApp1.csproj|c:\\users\\asus\\onedrive\\desktop\\team_codex\\team_codex_2024-25\\team-codex\\consoleapp1\\services\\ocrprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1290833-E2D9-4C59-B9D7-209D5BFAF68D}|ConsoleApp1.csproj|solutionrelative:services\\ocrprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1290833-E2D9-4C59-B9D7-209D5BFAF68D}|ConsoleApp1.csproj|c:\\users\\asus\\onedrive\\desktop\\team_codex\\team_codex_2024-25\\team-codex\\consoleapp1\\consoleapp1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C1290833-E2D9-4C59-B9D7-209D5BFAF68D}|ConsoleApp1.csproj|solutionrelative:consoleapp1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 390,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\Desktop\\Team_CodeX\\Team_CodeX_2024-25\\Team-CodeX\\ConsoleApp1\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\Desktop\\Team_CodeX\\Team_CodeX_2024-25\\Team-CodeX\\ConsoleApp1\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T11:17:19.363Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OcrProcessor.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\Desktop\\Team_CodeX\\Team_CodeX_2024-25\\Team-CodeX\\ConsoleApp1\\Services\\OcrProcessor.cs",
+              "RelativeDocumentMoniker": "Services\\OcrProcessor.cs",
+              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\Desktop\\Team_CodeX\\Team_CodeX_2024-25\\Team-CodeX\\ConsoleApp1\\Services\\OcrProcessor.cs",
+              "RelativeToolTip": "Services\\OcrProcessor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-01T21:46:16.503Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ImageLoader.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\Desktop\\Team_CodeX\\Team_CodeX_2024-25\\Team-CodeX\\ConsoleApp1\\Services\\ImageLoader.cs",
+              "RelativeDocumentMoniker": "Services\\ImageLoader.cs",
+              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\Desktop\\Team_CodeX\\Team_CodeX_2024-25\\Team-CodeX\\ConsoleApp1\\Services\\ImageLoader.cs",
+              "RelativeToolTip": "Services\\ImageLoader.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-01T21:38:29.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Preprocessor.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\Desktop\\Team_CodeX\\Team_CodeX_2024-25\\Team-CodeX\\ConsoleApp1\\Preprocessor.cs",
+              "RelativeDocumentMoniker": "Preprocessor.cs",
+              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\Desktop\\Team_CodeX\\Team_CodeX_2024-25\\Team-CodeX\\ConsoleApp1\\Preprocessor.cs",
+              "RelativeToolTip": "Preprocessor.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAkwF8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T20:55:10.111Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ConsoleApp1.csproj",
+              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\Desktop\\Team_CodeX\\Team_CodeX_2024-25\\Team-CodeX\\ConsoleApp1\\ConsoleApp1.csproj",
+              "RelativeDocumentMoniker": "ConsoleApp1.csproj",
+              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\Desktop\\Team_CodeX\\Team_CodeX_2024-25\\Team-CodeX\\ConsoleApp1\\ConsoleApp1.csproj",
+              "RelativeToolTip": "ConsoleApp1.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-01-10T11:38:52.803Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
