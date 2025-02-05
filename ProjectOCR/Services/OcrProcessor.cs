@@ -7,7 +7,7 @@ namespace OCRProject.Services
     {
         public static string ExtractText(string imagePath)
         {
-            using (var engine = new TesseractEngine(@"C:\Users\ASUS\OneDrive\Desktop\Team_CodeX\Team_CodeX_2024-25\Team-CodeX\ConsoleApp1\tessdata", "eng", EngineMode.Default))
+            using (var engine = new TesseractEngine(@"C:\Users\ASUS\OneDrive\Desktop\Team_CodeX\Team_CodeX_2024-25\Team-CodeX\ProjectOCR\tessdata", "eng", EngineMode.Default))
             {
                 using (var img = Pix.LoadFromFile(imagePath))
                 {

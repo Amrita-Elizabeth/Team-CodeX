@@ -1,47 +1,65 @@
 ﻿using System;
 using System.IO;
+using System.Drawing;
+using System.Linq;
 using OCRProject.Services;
 
 class Program
 {
     static void Main(string[] args)
     {
-        // Set the input and output folder paths
-        string inputFolderPath = @"C:\Users\ASUS\OneDrive\Desktop\Team_CodeX\Team_CodeX_2024-25\Team-CodeX\ConsoleApp1\InputImages";
-        string outputFolderPath = @"C:\Users\ASUS\OneDrive\Desktop\Team_CodeX\Team_CodeX_2024-25\Team-CodeX\ConsoleApp1\ProcessedImages";
-        string textOutputFolderPath = @"C:\Users\ASUS\OneDrive\Desktop\Team_CodeX\Team_CodeX_2024-25\Team-CodeX\ConsoleApp1\ExtractedText";
+        // Correct folder name
+        string inputFolderPath = @"C:\Users\ASUS\OneDrive\Desktop\Team_CodeX\Team_CodeX_2024-25\Team-CodeX\ProjectOCR\InputImages";
+        string outputFolderPath = Path.GetFullPath(@"C:\Users\ASUS\OneDrive\Desktop\Team_CodeX\Team_CodeX_2024-25\Team-CodeX\ProjectOCR\ProcessedImages");
 
-        // Create the output folders if they don't exist
+        // Ensure output folder exists
         Directory.CreateDirectory(outputFolderPath);
-        Directory.CreateDirectory(textOutputFolderPath);
+        Console.WriteLine($"Output folder path: {outputFolderPath}");
 
-        // Load images using ImageLoader service
-        var images = ImageLoader.LoadImages(inputFolderPath);
+        // Load images
+        var images = ImageLoader.LoadImages(inputFolderPath)
+            .Where(img => Path.GetFileNameWithoutExtension(img.FileName).Equals("sample1", StringComparison.OrdinalIgnoreCase) ||
+                          Path.GetFileNameWithoutExtension(img.FileName).Equals("sample2", StringComparison.OrdinalIgnoreCase))
+            .ToList();
 
-        // Create an instance of the Preprocessor (Grayscale Processing)
+        Console.WriteLine($"Loaded {images.Count} images for processing.");
+        foreach (var img in images)
+        {
+            Console.WriteLine($"Image loaded: {img.FileName}");
+        }
+
+        // Preprocessor instance
         var preprocessor = new Preprocessor();
 
         foreach (var imageData in images)
         {
             Console.WriteLine($"Processing image: {imageData.FileName}");
 
-            // Preprocess the image (convert to grayscale)
+            // 1. Grayscale Conversion
             var grayImage = preprocessor.ConvertToGrayscale(imageData.Image);
+            string grayImagePath = Path.Combine(outputFolderPath, Path.GetFileNameWithoutExtension(imageData.FileName) + "_grayscale.jpg");
+            grayImage.Save(grayImagePath);
+            Console.WriteLine($"Saved grayscale image at: {grayImagePath}");
 
-            // Save the preprocessed image to the output folder
-            string outputFilePath = Path.Combine(outputFolderPath, imageData.FileName);
-            grayImage.Save(outputFilePath, System.Drawing.Imaging.ImageFormat.Jpeg);
-            Console.WriteLine($"Saved processed image: {outputFilePath}");
+            // 2. Thresholding (ensure only one save)
+            var thresholdedImage = preprocessor.ApplyThresholding(grayImage);
+            string thresholdImagePath = Path.Combine(outputFolderPath, Path.GetFileNameWithoutExtension(imageData.FileName) + "_threshold.jpg");
+            thresholdedImage.Save(thresholdImagePath);
+            Console.WriteLine($"Saved thresholded image at: {thresholdImagePath}");
 
-            // Extract text using OCRProcessor
-            string extractedText = OcrProcessor.ExtractText(outputFilePath);
-            Console.WriteLine($"Extracted Text from {imageData.FileName}:\n{extractedText}\n");
+            // Remove any unintended save calls (if present in other parts)
 
-            // Save extracted text to a new text file
-            string textFileName = Path.GetFileNameWithoutExtension(imageData.FileName) + ".txt";
-            string textFilePath = Path.Combine(textOutputFolderPath, textFileName);
-            File.WriteAllText(textFilePath, extractedText);
-            Console.WriteLine($"Saved extracted text to: {textFilePath}\n");
+            // 3. Contrast Adjustment
+            var contrastImage = preprocessor.AdjustContrast(imageData.Image, 50);
+            string contrastImagePath = Path.Combine(outputFolderPath, Path.GetFileNameWithoutExtension(imageData.FileName) + "_contrast.jpg");
+            contrastImage.Save(contrastImagePath);
+            Console.WriteLine($"Saved contrast adjusted image at: {contrastImagePath}");
+
+            // 4. Rotation (Deskewing)
+            var rotatedImage = preprocessor.RotateImage(imageData.Image, 15);
+            string rotatedImagePath = Path.Combine(outputFolderPath, Path.GetFileNameWithoutExtension(imageData.FileName) + "_rotated.jpg");
+            rotatedImage.Save(rotatedImagePath);
+            Console.WriteLine($"Saved rotated image at: {rotatedImagePath}");
         }
     }
 }
