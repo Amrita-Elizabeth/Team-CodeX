@@ -1,0 +1,111 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Molly\\Documents\\Project\\Team-CodeX\\ProjectOCR\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C1290833-E2D9-4C59-B9D7-209D5BFAF68D}|ProjectOCR.csproj|c:\\users\\molly\\documents\\project\\team-codex\\projectocr\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1290833-E2D9-4C59-B9D7-209D5BFAF68D}|ProjectOCR.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1290833-E2D9-4C59-B9D7-209D5BFAF68D}|ProjectOCR.csproj|c:\\users\\molly\\documents\\project\\team-codex\\projectocr\\services\\ocrprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1290833-E2D9-4C59-B9D7-209D5BFAF68D}|ProjectOCR.csproj|solutionrelative:services\\ocrprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1290833-E2D9-4C59-B9D7-209D5BFAF68D}|ProjectOCR.csproj|c:\\users\\molly\\documents\\project\\team-codex\\projectocr\\projectocr.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C1290833-E2D9-4C59-B9D7-209D5BFAF68D}|ProjectOCR.csproj|solutionrelative:projectocr.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1290833-E2D9-4C59-B9D7-209D5BFAF68D}|ProjectOCR.csproj|c:\\users\\molly\\documents\\project\\team-codex\\projectocr\\services\\imageloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1290833-E2D9-4C59-B9D7-209D5BFAF68D}|ProjectOCR.csproj|solutionrelative:services\\imageloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1290833-E2D9-4C59-B9D7-209D5BFAF68D}|ProjectOCR.csproj|c:\\users\\molly\\documents\\project\\team-codex\\projectocr\\preprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1290833-E2D9-4C59-B9D7-209D5BFAF68D}|ProjectOCR.csproj|solutionrelative:preprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 390,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Molly\\Documents\\Project\\Team-CodeX\\ProjectOCR\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Molly\\Documents\\Project\\Team-CodeX\\ProjectOCR\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T11:17:19.363Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OcrProcessor.cs",
+              "DocumentMoniker": "C:\\Users\\Molly\\Documents\\Project\\Team-CodeX\\ProjectOCR\\Services\\OcrProcessor.cs",
+              "RelativeDocumentMoniker": "Services\\OcrProcessor.cs",
+              "ToolTip": "C:\\Users\\Molly\\Documents\\Project\\Team-CodeX\\ProjectOCR\\Services\\OcrProcessor.cs",
+              "RelativeToolTip": "Services\\OcrProcessor.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAA2wEcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-01T21:46:16.503Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ImageLoader.cs",
+              "DocumentMoniker": "C:\\Users\\Molly\\Documents\\Project\\Team-CodeX\\ProjectOCR\\Services\\ImageLoader.cs",
+              "RelativeDocumentMoniker": "Services\\ImageLoader.cs",
+              "ToolTip": "C:\\Users\\Molly\\Documents\\Project\\Team-CodeX\\ProjectOCR\\Services\\ImageLoader.cs",
+              "RelativeToolTip": "Services\\ImageLoader.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-01T21:38:29.927Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Preprocessor.cs",
+              "DocumentMoniker": "C:\\Users\\Molly\\Documents\\Project\\Team-CodeX\\ProjectOCR\\Preprocessor.cs",
+              "RelativeDocumentMoniker": "Preprocessor.cs",
+              "ToolTip": "C:\\Users\\Molly\\Documents\\Project\\Team-CodeX\\ProjectOCR\\Preprocessor.cs",
+              "RelativeToolTip": "Preprocessor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T20:55:10.111Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProjectOCR.csproj",
+              "DocumentMoniker": "C:\\Users\\Molly\\Documents\\Project\\Team-CodeX\\ProjectOCR\\ProjectOCR.csproj",
+              "RelativeDocumentMoniker": "ProjectOCR.csproj",
+              "ToolTip": "C:\\Users\\Molly\\Documents\\Project\\Team-CodeX\\ProjectOCR\\ProjectOCR.csproj",
+              "RelativeToolTip": "ProjectOCR.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-01-10T11:38:52.803Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
