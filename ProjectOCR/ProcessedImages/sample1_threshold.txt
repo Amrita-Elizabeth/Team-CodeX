@@ -1,0 +1,1 @@
+OCR extraction failed. Confidence: 95%. Please check image quality.
