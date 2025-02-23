@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Drawing;
 using System.Drawing.Imaging;
+using System.Runtime.InteropServices;
 using OpenCvSharp;
-using OpenCvSharp.Extensions;
 
 namespace OCRProject.Services
 {
@@ -54,29 +54,29 @@ namespace OCRProject.Services
         // 3. Auto-Detect Skew Angle (Deskewing)
         public float DetectSkewAngle(Bitmap image)
         {
-            using (var src = BitmapConverter.ToMat(image))
+            Mat src = BitmapToMat(image);
+            Mat gray = new Mat();
+            Cv2.CvtColor(src, gray, ColorConversionCodes.BGR2GRAY);
+
+            Mat edges = new Mat();
+            Cv2.Canny(gray, edges, 50, 200);
+
+            LineSegmentPolar[] lines = Cv2.HoughLines(edges, 1, Math.PI / 180, 100);
+
+            double totalAngle = 0;
+            int count = 0;
+
+            foreach (var line in lines)
             {
-                var gray = src.CvtColor(ColorConversionCodes.BGR2GRAY);
-                var edges = gray.Canny(50, 200);
-
-                // Detect lines using Hough Transform
-                LineSegmentPolar[] lines = Cv2.HoughLines(edges, 1, Math.PI / 180, 100);
-
-                double totalAngle = 0;
-                int count = 0;
-
-                foreach (var line in lines)
+                double theta = line.Theta * (180 / Math.PI);
+                if (theta > 45 && theta < 135) // Ignore vertical lines
                 {
-                    double theta = line.Theta * (180 / Math.PI);
-                    if (theta > 45 && theta < 135) // Ignore vertical lines
-                    {
-                        totalAngle += theta - 90; // Normalize to 0-degree horizontal
-                        count++;
-                    }
+                    totalAngle += theta - 90; // Normalize to 0-degree horizontal
+                    count++;
                 }
-
-                return count > 0 ? (float)(totalAngle / count) : 0;
             }
+
+            return count > 0 ? (float)(totalAngle / count) : 0;
         }
 
         // 4. Rotate Image using the detected skew angle
@@ -88,28 +88,12 @@ namespace OCRProject.Services
                 g.TranslateTransform(image.Width / 2, image.Height / 2);
                 g.RotateTransform(angle);
                 g.TranslateTransform(-image.Width / 2, -image.Height / 2);
-                g.DrawImage(image, new Point(0, 0));
+                g.DrawImage(image, new System.Drawing.Point(0, 0));
             }
             return rotated;
         }
 
         // 5. Adaptive Contrast Enhancement
-        private float GetAverageBrightness(Bitmap image)
-        {
-            float totalBrightness = 0;
-            int pixelCount = image.Width * image.Height;
-
-            for (int x = 0; x < image.Width; x++)
-            {
-                for (int y = 0; y < image.Height; y++)
-                {
-                    Color pixel = image.GetPixel(x, y);
-                    totalBrightness += pixel.GetBrightness() * 255; // Normalize brightness to 0-255 range
-                }
-            }
-            return totalBrightness / pixelCount;
-        }
-
         public Bitmap AdjustContrastDynamically(Bitmap image)
         {
             float avgBrightness = GetAverageBrightness(image);
@@ -145,6 +129,42 @@ namespace OCRProject.Services
                             0, 0, image.Width, image.Height, GraphicsUnit.Pixel, attributes);
             }
             return adjusted;
+        }
+
+        // 7. Get Average Brightness (Required for Dynamic Contrast)
+        private float GetAverageBrightness(Bitmap image)
+        {
+            float totalBrightness = 0;
+            int pixelCount = image.Width * image.Height;
+
+            for (int x = 0; x < image.Width; x++)
+            {
+                for (int y = 0; y < image.Height; y++)
+                {
+                    Color pixel = image.GetPixel(x, y);
+                    totalBrightness += pixel.GetBrightness() * 255;
+                }
+            }
+            return totalBrightness / pixelCount;
+        }
+
+        // 8. Convert Bitmap to Mat (Corrected with Marshal.Copy)
+        public Mat BitmapToMat(Bitmap bitmap)
+        {
+            BitmapData bitmapData = bitmap.LockBits(
+                new Rectangle(0, 0, bitmap.Width, bitmap.Height),
+                ImageLockMode.ReadOnly,
+                PixelFormat.Format24bppRgb
+            );
+
+            Mat mat = new Mat(bitmap.Height, bitmap.Width, MatType.CV_8UC3);
+            int size = bitmapData.Stride * bitmap.Height;
+            byte[] data = new byte[size];
+            Marshal.Copy(bitmapData.Scan0, data, 0, size);
+            bitmap.UnlockBits(bitmapData);
+
+            Marshal.Copy(data, 0, mat.Data, size);
+            return mat;
         }
     }
 }
