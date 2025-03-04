@@ -9,6 +9,9 @@ class Program
 {
     static void Main(string[] args)
     {
+        System.Environment.SetEnvironmentVariable("PATH",
+    System.Environment.GetEnvironmentVariable("PATH") + @";C:\Users\ASUS\.nuget\packages\opencvsharp4.runtime.win\4.10.0.20241108\runtimes\win-x64\native");
+
         string inputFolderPath = @"C:\Users\ASUS\OneDrive\Desktop\OCR\InputImages";
         string outputFolderPath = Path.GetFullPath(@"C:\Users\ASUS\OneDrive\Desktop\OCR\ProcessedImages");
 

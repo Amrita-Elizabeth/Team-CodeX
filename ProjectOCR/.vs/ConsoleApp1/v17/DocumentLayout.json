@@ -3,24 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\ASUS\\OneDrive\\Desktop\\SE-TeamCodex\\Project\\Team-CodeX\\ProjectOCR\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C1290833-E2D9-4C59-B9D7-209D5BFAF68D}|ProjectOCR.csproj|c:\\users\\asus\\onedrive\\desktop\\se-teamcodex\\project\\team-codex\\projectocr\\services\\imageloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1290833-E2D9-4C59-B9D7-209D5BFAF68D}|ProjectOCR.csproj|solutionrelative:services\\imageloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C1290833-E2D9-4C59-B9D7-209D5BFAF68D}|ProjectOCR.csproj|c:\\users\\asus\\onedrive\\desktop\\se-teamcodex\\project\\team-codex\\projectocr\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1290833-E2D9-4C59-B9D7-209D5BFAF68D}|ProjectOCR.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C1290833-E2D9-4C59-B9D7-209D5BFAF68D}|ProjectOCR.csproj|c:\\users\\asus\\onedrive\\desktop\\se-teamcodex\\project\\team-codex\\projectocr\\services\\ocrprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1290833-E2D9-4C59-B9D7-209D5BFAF68D}|ProjectOCR.csproj|solutionrelative:services\\ocrprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C1290833-E2D9-4C59-B9D7-209D5BFAF68D}|ProjectOCR.csproj|c:\\users\\asus\\onedrive\\desktop\\se-teamcodex\\project\\team-codex\\projectocr\\preprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C1290833-E2D9-4C59-B9D7-209D5BFAF68D}|ProjectOCR.csproj|solutionrelative:preprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{C1290833-E2D9-4C59-B9D7-209D5BFAF68D}|ProjectOCR.csproj|c:\\users\\asus\\onedrive\\desktop\\se-teamcodex\\project\\team-codex\\projectocr\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1290833-E2D9-4C59-B9D7-209D5BFAF68D}|ProjectOCR.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1290833-E2D9-4C59-B9D7-209D5BFAF68D}|ProjectOCR.csproj|c:\\users\\asus\\onedrive\\desktop\\se-teamcodex\\project\\team-codex\\projectocr\\projectocr.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{C1290833-E2D9-4C59-B9D7-209D5BFAF68D}|ProjectOCR.csproj|solutionrelative:projectocr.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C1290833-E2D9-4C59-B9D7-209D5BFAF68D}|ProjectOCR.csproj|c:\\users\\asus\\onedrive\\desktop\\se-teamcodex\\project\\team-codex\\projectocr\\projectocr.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{C1290833-E2D9-4C59-B9D7-209D5BFAF68D}|ProjectOCR.csproj|solutionrelative:projectocr.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1290833-E2D9-4C59-B9D7-209D5BFAF68D}|ProjectOCR.csproj|c:\\users\\asus\\onedrive\\desktop\\se-teamcodex\\project\\team-codex\\projectocr\\services\\ocrprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1290833-E2D9-4C59-B9D7-209D5BFAF68D}|ProjectOCR.csproj|solutionrelative:services\\ocrprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C1290833-E2D9-4C59-B9D7-209D5BFAF68D}|ProjectOCR.csproj|c:\\users\\asus\\onedrive\\desktop\\se-teamcodex\\project\\team-codex\\projectocr\\services\\imageloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1290833-E2D9-4C59-B9D7-209D5BFAF68D}|ProjectOCR.csproj|solutionrelative:services\\imageloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,17 +38,16 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\Desktop\\SE-TeamCodex\\Project\\Team-CodeX\\ProjectOCR\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\ASUS\\OneDrive\\Desktop\\SE-TeamCodex\\Project\\Team-CodeX\\ProjectOCR\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAQwE8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-10T11:17:19.363Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -52,51 +55,61 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
+              "Title": "ProjectOCR",
+              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\Desktop\\SE-TeamCodex\\Project\\Team-CodeX\\ProjectOCR\\ProjectOCR.csproj",
+              "RelativeDocumentMoniker": "ProjectOCR.csproj",
+              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\Desktop\\SE-TeamCodex\\Project\\Team-CodeX\\ProjectOCR\\ProjectOCR.csproj",
+              "RelativeToolTip": "ProjectOCR.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-04T21:36:16.801Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "OcrProcessor.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\Desktop\\SE-TeamCodex\\Project\\Team-CodeX\\ProjectOCR\\Services\\OcrProcessor.cs",
               "RelativeDocumentMoniker": "Services\\OcrProcessor.cs",
               "ToolTip": "C:\\Users\\ASUS\\OneDrive\\Desktop\\SE-TeamCodex\\Project\\Team-CodeX\\ProjectOCR\\Services\\OcrProcessor.cs",
               "RelativeToolTip": "Services\\OcrProcessor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAQwCAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T21:46:16.503Z"
+              "WhenOpened": "2025-02-01T21:46:16.503Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "ImageLoader.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\Desktop\\SE-TeamCodex\\Project\\Team-CodeX\\ProjectOCR\\Services\\ImageLoader.cs",
               "RelativeDocumentMoniker": "Services\\ImageLoader.cs",
               "ToolTip": "C:\\Users\\ASUS\\OneDrive\\Desktop\\SE-TeamCodex\\Project\\Team-CodeX\\ProjectOCR\\Services\\ImageLoader.cs",
               "RelativeToolTip": "Services\\ImageLoader.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBwAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T21:38:29.927Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-01T21:38:29.927Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Preprocessor.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\Desktop\\SE-TeamCodex\\Project\\Team-CodeX\\ProjectOCR\\Preprocessor.cs",
               "RelativeDocumentMoniker": "Preprocessor.cs",
               "ToolTip": "C:\\Users\\ASUS\\OneDrive\\Desktop\\SE-TeamCodex\\Project\\Team-CodeX\\ProjectOCR\\Preprocessor.cs",
               "RelativeToolTip": "Preprocessor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAIAwwDoAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T20:55:10.111Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-22T20:55:10.111Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ProjectOCR.csproj",
               "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\Desktop\\SE-TeamCodex\\Project\\Team-CodeX\\ProjectOCR\\ProjectOCR.csproj",
               "RelativeDocumentMoniker": "ProjectOCR.csproj",
               "ToolTip": "C:\\Users\\ASUS\\OneDrive\\Desktop\\SE-TeamCodex\\Project\\Team-CodeX\\ProjectOCR\\ProjectOCR.csproj",
               "RelativeToolTip": "ProjectOCR.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBEAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-01-10T11:38:52.803Z"
             }
